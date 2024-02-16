@@ -13,6 +13,10 @@ dependencies:
   http: ^1.2.0
   shared_preferences: ^2.2.2
   localstorage: ^4.0.1+4
+  flutter_dotenv: ^5.1.0
+  fluttertoast: ^8.2.4
+  sticky_headers: ^0.3.0+2
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +25,15 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets: 
+    - assets/images/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/appicon.png"
+  min_sdk_android: 21
+
 
 fonts: 
   - family: Inter

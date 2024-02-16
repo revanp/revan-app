@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revan_app/screens/home.dart';
 import 'package:revan_app/screens/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -49,7 +50,7 @@ class _CheckAuthState extends State<CheckAuth> {
     if (!isAuth) {
       child = LoginForm();
     } else {
-      child = LoginForm();
+      child = Home();
     }
 
     return Scaffold(body: child);
