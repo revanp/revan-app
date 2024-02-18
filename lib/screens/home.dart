@@ -2,9 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:revan_app/screens/login.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:revan_app/screens/login.dart';
+import 'package:revan_app/screens/profile.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -48,7 +50,11 @@ class HomeState extends State<Home> {
             Container(
               margin: EdgeInsets.only(left: 10),
               child: IconButton(
-                  icon: Icon(Icons.menu, size: 25),
+                  icon: Icon(
+                    Icons.menu,
+                    size: 25,
+                    color: Colors.black,
+                  ),
                   onPressed: () {
                     // Scaffold.of(context).openDrawer();
                   }),
@@ -66,9 +72,14 @@ class HomeState extends State<Home> {
             Container(
               margin: EdgeInsets.only(right: 10),
               child: IconButton(
-                  icon: Icon(Icons.account_circle, size: 35),
+                  icon: Icon(
+                    Icons.account_circle,
+                    size: 35,
+                    color: Colors.black,
+                  ),
                   onPressed: () {
-                    // Scaffold.of(context).openDrawer();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Profile()));
                   }),
             )
           ])
@@ -107,7 +118,7 @@ class HomeState extends State<Home> {
             Container(
                 margin: EdgeInsets.only(left: 10),
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 2.22,
+                  width: MediaQuery.of(context).size.width / 2.2,
                   child: Column(
                     children: [
                       Container(
